@@ -39,7 +39,7 @@ To run this demo you will need to:
 ## Setup
 ---
 
-In `proxy/envoy.sender.yml` and `proxy/envoy.receiver.yml`, replace the `{YOUR_QRYPT_TOKEN}` placeholder with a valid usage token. Then, run
+In `proxies/envoy.sender.yml` and `proxies/envoy.receiver.yml`, replace the `{YOUR_QRYPT_TOKEN}` placeholder with a valid usage token. Then, run
 
 ```bash
 $ docker-compose up --build
