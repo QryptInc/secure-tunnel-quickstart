@@ -1,0 +1,37 @@
+version: '3.9'
+
+x-common:
+  &common
+  build:
+    context: ./services
+
+x-proxy-common:
+  &proxy-common
+  build:
+    context: ./proxies
+  depends_on:
+    - recipient
+    - eavesdropper
+
+services:
+
+  entrypoint:
+    <<: *common
+    environment:
+      UPSTREAM: 'sender-proxy'
+    ports:
+      - "3000:3000"
+
+  eavesdropper:
+    <<: *common
+
+  recipient:
+    <<: *common
+
+  sender-proxy:
+    <<: *proxy-common
+    command: ["/etc/envoy.sender.yml"]
+  
+  receiver-proxy:
+    <<: *proxy-common
+    command: ["/etc/envoy.receiver.yml"]
