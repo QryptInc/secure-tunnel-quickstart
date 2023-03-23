@@ -27,7 +27,7 @@ static_resources:
           - name: envoy.filters.http.secure_proxy
             typed_config:
               "@type": type.googleapis.com/secureproxy.Config
-              token: "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjhlNDQ3NTE5NjE3OTQ1MWFiMmUxZjhlOGJlYjk0ZjY3In0.eyJleHAiOjE3MTA3NjE5MjQsIm5iZiI6MTY3OTIyNTkyNCwiaXNzIjoiQVVUSCIsImlhdCI6MTY3OTIyNTkyNCwiZ3JwcyI6WyJQVUIiXSwiYXVkIjpbIlJQUyIsIlFERUEiXSwicmxzIjpbIlJORFVTUiIsIlFERVVTUiJdLCJjaWQiOiJOekRiaGRTZmduZVRSa3BndTEtMEYiLCJkdmMiOiJhMGFhZWRlMGJkNjQ0YzIzYmVkM2RiMzFjOTg0ZWY1YSIsImp0aSI6IjQ5Njg2M2IwMjgzZjQ0Yzk5YzdmNjI2ODA4MjEwNTljIiwidHlwIjozfQ.9fnP_zGwx5viOPXUE4X42_tzXfCErEhs-TZYBKJ0Eb3QUsYXd6NHS4JooVTMliLKYQlpCSPxTJWioipCrnUWuA"
+              token: "{YOUR_QRYPT_TOKEN}" 
               role: RECEIVER
           - name: envoy.filters.http.router
             typed_config:
