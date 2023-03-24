@@ -6,26 +6,26 @@ It is meant for demonstration purposes only, and is not suitable for a productio
 ## Introduction
 ---
 
-Secure Tunnel is a custom Envoy HTTP filter that can be used that can be used to enable quantum secure
-transmission channels. 
+Secure Tunnel is a custom Envoy HTTP filter that can be used to enable quantum secure
+transmission channels across untrusted networks. 
 
-This achieved by using proxies on both the sender and receiver ends of a channel. The proxies
-use Qrypt's quantum secure key generation technology to generate encryption keys and perform One Time Pad
-encryption/decryption on each end of the channel, without any keys ever being stored or transmitted.
+This is achieved by installing Envoy proxies on both ends of a channel. These proxies
+use Qrypt's distributed key generation technology to perform quantum secure One Time Pad
+encryption/decryption on each end, without ever storing or transmitting any keys. 
 
 ![](docs/secure-tunnel-overview.png)
 
 ## Docker Image
 ---
 
-Secure Tunnel is publicly available on Docker Hub.
+Secure Tunnel is publicly available as an image on Docker Hub.
 
 ```bash
 docker pull qryptdev001/securetunnel-envoy:1.0.0
 ```
 The image contains a custom build of Envoy with Secure Tunnel statically linked into it.
 
-The binary is at `/usr/local/bin/envoy`.
+The executable is at `/usr/local/bin/envoy`.
 
 ## Requirements
 ---
