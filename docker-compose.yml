@@ -24,6 +24,8 @@ services:
 
   eavesdropper:
     <<: *common
+    environment:
+      UPSTREAM: 'receiver-proxy'
 
   recipient:
     <<: *common

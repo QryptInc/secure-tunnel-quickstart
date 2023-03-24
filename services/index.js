@@ -15,7 +15,7 @@ app.post('/', (req, res) => {
  
     // Forward the request if upstream is defined
     if(upstream){
-        axios.post(`http://${upstream}`, req.body, {headers: {'Content-Type': 'application/json'}})
+        axios.post(`http://${upstream}`, req.body, {headers: {...req.headers}})
             .then(response => console.log(`Received ${response.data} from ${upstream}`))
             .catch(err => console.error(err))
     }
