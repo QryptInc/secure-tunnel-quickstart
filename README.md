@@ -43,7 +43,7 @@ To run this demo you will need to:
 In `proxies/envoy.sender.yml` and `proxies/envoy.receiver.yml`, replace the `{YOUR_QRYPT_TOKEN}` placeholder with a valid usage token. Then, run
 
 ```bash
-$ docker-compose up --build
+docker-compose up --build
 ```
 
 ## Demo 
@@ -66,5 +66,5 @@ The `listener-proxy` then decrypts the message and forwards it to the `recipient
 To send a message through the demo tunnel, run
 
 ```bash
-$ curl -d '{"someKey":"someValue"}' -H "Content-Type: application/json" -X POST http://localhost:3000
+curl -d '{"someKey":"someValue"}' -H "Content-Type: application/json" -X POST http://localhost:3000
 ```
