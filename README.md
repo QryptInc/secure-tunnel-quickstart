@@ -35,11 +35,12 @@ To run this demo you will need to:
 1. Install `docker-compose`
 2. Create a Qrypt [portal](https://portal.qrypt.com) account
 3. Generate a Qrypt keygen token (this can be done on the portal)
+    
     a. When generating the token, ensure that it has the `keygen` scope
 
 ## Setup
 ---
-
+ 
 In `proxies/envoy.sender.yml` and `proxies/envoy.receiver.yml`, replace the `{YOUR_QRYPT_TOKEN}` placeholder with a valid usage token. Then, run
 
 ```bash
