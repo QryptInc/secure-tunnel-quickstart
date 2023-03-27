@@ -20,7 +20,8 @@ app.post('/', (req, res) => {
             .catch(err => console.error(err))
     }
 
-    // IMPORTANT: 
+    // IMPORTANT: response must be either empty or larger than 16 bytes, otherwise Envoy
+    // will throw an obscure error 
     res.status(200).send();
 })
 
